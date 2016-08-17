@@ -1,0 +1,430 @@
+/*
+Theme Name: ULTiMATE Theme
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: Md. Mamunuzzaman
+Author URI: http://www.mamunuzzaman.tk/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigations
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Header
+ * 11.0 - Widgets
+ * 12.0 - Content
+ *    12.1 - Posts and pages
+ *    12.2 - Post Formats
+ *    12.3 - Comments
+ * 13.0 - Footer
+ * 14.0 - Media
+ *    14.1 - Captions
+ *    14.2 - Galleries
+ * 15.0 - Multisite
+ * 16.0 - Media Queries
+ *    16.1 - Mobile Large
+ *    16.2 - Tablet Small
+ *    16.3 - Tablet Large
+ *    16.4 - Desktop Small
+ *    16.5 - Desktop Medium
+ *    16.6 - Desktop Large
+ *    16.7 - Desktop X-Large
+ * 17.0 - Print
+ */
+
+
+/**
+ * 1.0 - Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800,800italic,700italic); 
+ 
+ .topBarHolder{
+	background: #cc3333;
+	width: 100%; 
+ }
+ 
+ ul.topmenu{ 
+ 	margin: 0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif; 
+	float: right;
+ }
+ 
+ ul.topmenu li{
+	margin:0;
+	padding:0 23px 0 0;
+	display: block;
+	float: left;
+	background: url(images/topline.png) right 50% no-repeat;
+ }
+ 
+ ul.topmenu li:last-child{
+	background: none;
+	padding-right: 0; 
+ }
+ ul.topmenu a{
+	float: left;
+	display: block;
+	background:url(images/toparrow.png) right 50% no-repeat; 
+	padding: 14px 23px;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+ }
+ 
+ 
+ .callDiv{
+	background: #343b4f; 	
+ }
+ 
+ .headerBlock{
+	min-height: 100px;
+	background: #3b445c; 
+	position: relative;
+	z-index: 5;
+ }	
+ 
+ .headerBlock2{
+	display: block;
+	background: url(images/header-bg.png) left -7px repeat-x;
+	height: 5px;
+	width: 100%;
+	position: relative;
+	z-index: 2;	 
+ }
+ 
+ .headerBlock3{
+	display: block;
+	background: url(images/markbottom.png) left -7px repeat-x;
+	height: 23px;
+	width: 100%;
+	position: relative;
+	z-index: 2;	 
+	top: -20px;
+ }
+ 
+ img.site-logo{
+	position: absolute;
+	z-index: 3;
+	top: -80px;
+	left: 0;	 
+ }
+ 
+#carousel-example  .carousel-control.left,
+#carousel-example  .carousel-control.right{
+	background: none;	 
+ }
+ 
+#carousel-example .glyphicon-chevron-right:before {
+     background: url(images/rightarrow.png) right top no-repeat;
+	 content: '' !important;
+	 width: 52px;
+	 height: 89px;
+	 display: block;
+	 
+}
+
+#carousel-example .glyphicon-chevron-left:before {
+     background: url(images/leftarrow.png) right top no-repeat;
+	 content: '' !important;
+	 width: 52px;
+	 height: 89px;
+	 display: block;
+}
+
+
+
+#carousel-example .carousel-control .glyphicon-chevron-right{
+	right: 11% !important;
+	margin-right: 0 !important; 	
+}
+
+#carousel-example .carousel-control .glyphicon-chevron-left{
+	left: 0% !important;	
+	margin-left: 0  !important;
+}
+
+
+
+#carousel-example1 .glyphicon-chevron-right:before {
+     background: url(images/left-secong.png) right top no-repeat;
+	 content: '' !important;
+	 width: 40px;
+	 height: 40px;
+	 display: block;
+	 
+}
+
+#carousel-example1 .glyphicon-chevron-left:before {
+     background: url(images/right-secong.png) right top no-repeat;
+	 content: '' !important;
+	 width: 40px;
+	 height: 40px;
+	 display: block;
+}
+
+#carousel-example1 .carousel-control .glyphicon-chevron-right{
+	right: 5% !important;
+	margin-right: 0 !important; 	
+}
+
+#carousel-example1 .carousel-control .glyphicon-chevron-left{
+	left: 0% !important;	
+	margin-left: 0  !important;
+}
+
+#carousel-example1 .carousel-control.left,
+#carousel-example1 .carousel-control.right{
+	background-image: none !important;	
+}
+
+#carousel-example1 .carousel-control,
+#carousel-example1 .carousel-control.right{
+	opacity: 1;
+}
+
+#carousel-example1 .carousel-indicators{
+	bottom: -50px;
+}
+
+
+
+/*------------------------------------*\
+-------- DEMO Code: accordion
+\*------------------------------------*/
+/*----- Accordion -----*/
+.accordion, .accordion * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion {
+	overflow:hidden;
+	/*box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:3px;
+	background:#f7f7f7;*/ 
+}
+
+
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+	width:100%;
+	padding:15px 0;
+	display:inline-block;
+	border-bottom:1px solid #cccccc;
+	/*background:#333;*/
+	transition:all linear 0.15s;
+	/* Type */
+	font-size:1.4em;
+	/*text-shadow:0px 1px 0px #1a1a1a;*/
+	color:#35354B;
+	font-weight: 600;
+	background: url(images/accor-down.png) right 50% no-repeat;
+}
+
+
+.accordion-section-title:hover {
+	/*background:#4c4c4c;*/
+	/* Type */
+	text-decoration:none;
+	
+}
+
+.accordion-section-title.active{
+	background: url(images/accor-close.png) right 50% no-repeat;	
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+.accordion ul{
+	margin:0;
+	padding:0;	
+}
+
+.accordion li{
+	list-style: none;
+	margin:0;
+	padding:0;	
+}
+
+.accordion li a{
+	font-size: 1.1em;
+	line-height: 1.8em;
+    display: block;	
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	padding:15px 0;
+	display:none;
+}
+
+
+
+.accordion1, .accordion1 * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion1 {
+	overflow:hidden;
+	/*box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:3px;
+	background:#f7f7f7;*/ 
+}
+
+.accordion1 ul{
+	margin:0;
+	padding:0;	
+}
+
+.accordion1 li{
+	list-style: none;
+	margin:0;
+	padding:0;
+	margin:0 0 15px 0;
+	display: block;	
+}
+
+.accordion1 li a{
+	font-size: 1.1em;
+	line-height: 1.8em;
+    display: block;	
+}
+
+
+
+
+.accordion2, .accordion2 * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion2 {
+	overflow:hidden;
+	/*box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:3px;
+	background:#f7f7f7;*/ 
+}
+
+.accordion2 ul{
+	margin:0;
+	padding:0;	
+}
+
+.accordion2 li{
+	list-style: none;
+	margin:0;
+	padding:0;
+	margin:0 0 15px 0;
+	display: block;	
+}
+
+.accordion2 li a{
+	font-size: 1.1em;
+	line-height: 1.8em;
+    display: block;	
+}
+
+.mobileonly{ 
+	padding-bottom: 15px;	
+}
+
+.accordion-maintab .accordion-section-title{
+	background: #cc3333 url(images/headertabs.png) center top no-repeat;
+	color: #fff;
+    text-transform: uppercase;
+    padding-left: 30px;
+    font-size: 2.6em;
+	font-family:'BlockBerthold-ExtraCondensed';
+	letter-spacing: .08em;
+}
+
+@media only screen and (max-width : 600px) {
+	.accordion-maintab .accordion-section-title{ 
+    	font-size: 2.2em; 
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	.accordion-maintab .accordion-section-title{ 
+    	font-size: 1.8em; 
+	}
+}
+
+.accordion-maintab .accordion-section-title{
+	border-bottom: 1px solid #2e344a;
+	text-decoration:none !important;
+	position: relative;
+}	
+
+.accordion-maintab .accordion-section-title:hover{
+	
+}
+
+.accordion-maintab .accordion-section-content{
+	background: #fff;
+	padding: 30px;
+}
+
+.accordion-maintab .accordion-section-title.active{
+	outline: none !important;	
+	background: #fff;
+	background-image: none;
+	color: #35354b;
+	border-bottom:0;
+}
+
+.accordion-maintab .accordion-section-title:after{
+	position: absolute;	
+	top: 25%;
+    right: 15px;
+	display: block;
+	display: inline-block;
+    font-family: 'Glyphicons Halflings';
+	content: "\e114";
+	color: #2e354b;
+}
+
+.accordion-maintab .accordion-section-title.active:after{
+	position: absolute;	
+	top: 25%;
+    right: 15px;
+	display: block;
+	display: inline-block;
+    font-family: 'Glyphicons Halflings';
+	content: "\e014"; !important;
+	color: #cc3333;
+}
+
+
+ 
